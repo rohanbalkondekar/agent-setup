@@ -16,13 +16,17 @@ git clone https://github.com/rohanbalkondekar/agent-setup.git ~/Personal/agent-s
 ~/Personal/agent-setup/scripts/install.sh
 ```
 
-The installer adds this repository as a Claude Code marketplace, installs the
-`agent-core` plugin, and links all skills into `~/.codex/skills`. Claude Code
-agents load the plugin skills. Codex sessions load the same files through the
-links, so the two runtimes cannot drift on one machine.
+The installer links every skill into both `~/.claude/skills` and
+`~/.codex/skills`. Claude Code agents and Codex sessions therefore load the
+same files from the checkout and cannot drift on one machine.
 
 Run `git pull` in the clone and restart active agent sessions to pick up an
-update. Run `scripts/verify.sh` to check the links and Claude plugin.
+update. Run `scripts/verify.sh` to check both runtimes.
+
+The repository also remains a Claude Code plugin marketplace for people who
+prefer versioned plugin installs. The direct-link installer is the recommended
+setup when one person uses both runtimes because plugin installs use cached
+copies.
 
 ## Portable instructions
 
