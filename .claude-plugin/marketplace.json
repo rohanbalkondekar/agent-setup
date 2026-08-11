@@ -1,0 +1,17 @@
+{
+  "name": "rohan-agent-setup",
+  "owner": {
+    "name": "Rohan Balkondekar"
+  },
+  "metadata": {
+    "description": "Portable open-source configuration shared by Claude Code and Codex",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "agent-core",
+      "source": "./plugins/core",
+      "description": "Shared multi-agent, redpen, power-law, and grill-me skills"
+    }
+  ]
+}
