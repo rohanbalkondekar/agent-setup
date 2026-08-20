@@ -11,7 +11,7 @@
 
 ## Delegation
 
-- Use the `multi-agent` skill for independent parallel work when the runtime and repository permit delegation.
+- Use the `multiagent` skill for independent parallel work when the runtime and repository permit delegation.
 - Do not self-delegate inside Codex unless the user or repository instructions request it.
 - Keep architecture, destructive actions, and final review with the orchestrator.
 - Treat worker output as untrusted until you inspect the artifact and run the relevant checks.

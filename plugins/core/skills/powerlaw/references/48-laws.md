@@ -1,6 +1,6 @@
 # The 48 Laws — work-safe readings
 
-Used by the power-check mode of the power-law skill. For each law: does it fire on the input? A law fires if the input (a) violates it, (b) misses an opportunity it suggests, or (c) exposes the user to someone else playing it.
+Used by the power-check mode of the powerlaw skill. For each law: does it fire on the input? A law fires if the input (a) violates it, (b) misses an opportunity it suggests, or (c) exposes the user to someone else playing it.
 
 
 1. **Never outshine the master.** Don't upstage your boss/senior stakeholders in their own arena. Let them look good; attribute wins upward where honest. Check: does this message correct, embarrass, or steal the spotlight from someone above the user in front of others?

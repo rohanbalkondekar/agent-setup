@@ -11,7 +11,7 @@
     {
       "name": "agent-core",
       "source": "./plugins/core",
-      "description": "Shared multi-agent, redpen, power-law, and grill-me skills"
+      "description": "Shared skills: multiagent, redpen, powerlaw, grillme, prove-it, show-me-your-work, wizard, blast-radius"
     }
   ]
 }

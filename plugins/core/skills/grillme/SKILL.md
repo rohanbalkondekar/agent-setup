@@ -1,9 +1,10 @@
 ---
-name: grill-me
+name: grillme
 description: Interview the user relentlessly about a plan until reaching shared understanding, resolving each branch of the decision tree. Covers software plans (architecture, refactors, code design, implementation ideas) AND non-coding plans (decisions, strategy, courses, product ideas, business moves, writing projects, career choices, personal plans). Use when the user wants to stress-test a plan or design, get grilled on an idea, validate requirements before implementation, or says "grill me" in any context.
+compatibility: Portable Agent Skill for Claude Code, Pi, and Codex CLI.
 metadata:
-  version: "2.0.0"
-  source: "local (merge of grill-me + grill-me-non-coding)"
+  version: "2.2.0"
+  source: "local (merge of grill-me + grill-me-non-coding; rounds + docs grafted from mattpocock grilling/grill-with-docs, MIT, 2026-08-19; ADR gate + glossary guard from mattpocock domain-modeling, MIT, 2026-08-20)"
 ---
 
 # Grill Me
@@ -23,7 +24,7 @@ Detect from context; say which you're in:
 
 1. **Do not execute yet.** This skill is for discovery, pressure-testing, and decision quality. Only produce the implementation, artifact, schedule, copy, or pitch if the user explicitly switches from grilling to execution.
 2. **Inspect before asking.** When a factual answer is probably in the repository, configuration, docs, tests, schemas, logs, or provided materials, use available tools to find it instead of asking the user.
-3. **Ask one decisive question at a time.** Use a small cluster only when the questions are inseparable. Avoid dumping a questionnaire.
+3. **Ask one decisive question at a time — or batch the frontier.** Default: one decisive question, a small cluster only when inseparable. When the tree is dense or the user wants speed ("batch it", "rounds"), switch to rounds: ask the whole frontier (every question whose prerequisites are already settled) in one numbered round, each with lettered options and your recommended answer, so the user can reply "1A, 2B, 3 custom: ...". A question whose answer depends on another question still open this round belongs to a later round. Recompute the frontier after each round; stop when it is empty.
 4. **Always include a recommendation.** Every question must contain your recommended answer, plus confidence when useful.
 5. **Be adversarial but useful.** Challenge vague goals, hidden assumptions, fake constraints, vanity metrics, wishful thinking, unnecessary complexity, missing rollback plans, weak tests, missing audiences, and plans that depend on luck.
 6. **Track decisions.** Treat every user answer or accepted recommendation as a decision. Revisit it only if a later dependency contradicts it.
@@ -43,6 +44,14 @@ Why this matters: <brief consequence of getting it wrong>
 ```
 
 If the user replies "yes", "agreed", "use your recommendation", or similar, record the recommendation as accepted and move to the next branch.
+
+## Docs output ("grill with docs")
+
+When the user asks for "grill with docs" or wants artifacts from the session: record settled decisions as ADR entries (context → decision → consequence) and maintain a glossary of domain terms as they surface. Write both to the project's docs location (`docs/adr/`, `decisions.md`, or wherever the project already keeps them) at the end of each round, not after every question. The interview leaves a paper trail the next session can load instead of re-deriving.
+
+Gate ADRs: write one only when the decision is hard to reverse, would surprise a future reader without context, AND resolved a real trade-off between genuine alternatives. If any of the three is missing, the round summary is enough. The glossary holds terms only, never implementation details.
+
+Guard the glossary during the interview: when the user's wording conflicts with a term already in the glossary, call it out ("your glossary defines 'cancellation' as X, but you seem to mean Y — which is it?"), and when a term is fuzzy or overloaded, propose one canonical term before recording it.
 
 ## Branches to cover
 

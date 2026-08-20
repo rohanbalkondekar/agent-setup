@@ -4,10 +4,10 @@ Open-source agent configuration shared across Claude Code, Codex, and Prime Agen
 
 The repository is the canonical source for four daily skills:
 
-- `multi-agent`: task decomposition, delegation, reconciliation, and verification
+- `multiagent`: task decomposition, delegation, reconciliation, and verification
 - `redpen`: direct, human prose editing with technical and relational registers
-- `power-law`: priority and stakeholder power checks used by Redpen
-- `grill-me`: structured interrogation of plans before implementation
+- `powerlaw`: priority and stakeholder power checks used by Redpen
+- `grillme`: structured interrogation of plans before implementation
 
 ## Install
 
@@ -71,6 +71,20 @@ The repository also remains a Claude Code plugin marketplace for people who
 prefer versioned plugin installs. The direct-link installer is the recommended
 setup when one person uses both runtimes because plugin installs use cached
 copies.
+
+## Third-party plugins
+
+Some tools in the standard are plugins, not skills, and install from their own
+marketplaces so they keep updating from upstream. `scripts/install.sh` installs
+them best-effort for every CLI it finds (`claude`, `codex`). Current list:
+
+- [ponytail](https://github.com/DietrichGebert/ponytail) (MIT) — lazy senior
+  dev mode: the simplest, shortest solution that works. YAGNI, stdlib first,
+  no unrequested abstractions. Includes `ponytail-audit`, `ponytail-debt`, and
+  `ponytail-review` for de-slopping an existing codebase.
+
+Override with `AGENT_SETUP_PLUGINS="owner/repo=plugin@marketplace ..."` or set
+it empty to skip.
 
 ## Portable instructions
 

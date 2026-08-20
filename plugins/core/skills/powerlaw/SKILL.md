@@ -1,6 +1,6 @@
 ---
-name: power-law
-description: Prioritize tasks and opportunities by power-law leverage, or review stakeholder communications for strategic risks. Use when asked to rank a backlog, apply 80/20 or the Eisenhower matrix, find the highest-leverage work, power-check a message, assess workplace politics, or review a plan through the 48 Laws of Power as defensive awareness rather than manipulation.
+name: powerlaw
+description: Leverage and workplace-strategy skill with two modes. RANK mode — prioritize any set of tasks, options, backlog items, or opportunities by power-law leverage (80/20, Pareto-squared 64/4, 10x-is-easier-than-2x, theory of constraints, compounding, asymmetric bets) and the Eisenhower matrix; use when the user asks "where should I contribute", "what matters most", "per power law", "rank my backlog", "what's the 20%", "help me prioritize", "eisenhower", is overwhelmed or juggling conflicting priorities, planning a day or week, or weighing do/defer/delegate/drop. POWER-CHECK mode — run stakeholder communications, emails, Slack messages, meeting plans, or any people/politics work situation through the 48 Laws of Power plus strategy lenses (Eisenhower, 80/20, 10x-vs-2x, boss-axis, five career failure modes), flagging violations, risks, and missed opportunities as defensive awareness and practical influence, never manipulation; use when the user asks to "power-check", "48 laws", review stakeholder comms, or wants a political/strategic read before acting.
 ---
 
 # Power Law — leverage razors and workplace power check
