@@ -99,6 +99,9 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 - Meta-joiners ("The rest of this essay...")? Delete. Let the essay move.
 - Outward-facing relational text? Before stripping a courtesy or softener, run the intent test in [references/register.md](references/register.md). "Wait." is not an improvement on "Allow me a moment" when a client is reading.
 - Chat message (Slack, Teams, DM)? Split it: greeting on its own line, one idea per line, blank line between topics, numbers as labeled lines, close with status + next action. See example 7 in [references/examples.md](references/examples.md). (Chat only — in essays and docs this becomes dramatic fragmentation.)
+- Email, review, update, or decision doc? Verdict in the first two lines ("Bottom line: ..." / a TL;DR section), detail after. See example 8.
+- Plan, proposal, or ADR? State the negative space: an out-of-scope list and a "done does not require" list. See example 9.
+- Status update or report? Every claim carries a number or a link; every open item carries an owner and a next action. See example 10.
 - Colon as a mid-sentence connector (not before a list or example)? Rewrite so the point stands alone.
 - Abstract metaphor noun (substrate, wedge, vector, nexus, locus, vantage, bedrock, modality, paradigm, primitive-as-noun, harness/surface/scaffolding as metaphor, gold-plating, ratchet, evacuate-for-code, endgame, north star, flywheel)? Use the concrete word: "substrate" → "base", "wedge in" → "add", "gold-plating" → "more than the job needs", "endgame" → "the last phase".
 - Hyphen or en dash doing an em dash's job ("smooth - its just...")? Same tell, same fix: period or comma.
