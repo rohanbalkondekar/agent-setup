@@ -80,6 +80,21 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 - **Let some mess in.** Tangents and asides are human. Perfect structure feels algorithmic.
 - **Be specific about feelings.** Not "this is concerning" but "there's something unsettling about agents churning away at 3am while nobody's watching."
 
+## Stakeholder updates and reports
+
+For project, investor, executive, or cross-team updates, edit for stewardship, not activity reporting:
+
+1. Open with a one-sentence headline. Follow with a 2–4 sentence recap of the project's goal.
+2. Assume the audience is smart, busy, and missing context. Answer the three questions they care about most.
+3. Show evidence that the writer is fulfilling the entrusted role. Do not substitute a list of completed tasks.
+4. State material changes from the prior update and explain why they changed.
+5. Use a calm, factual tone. Keep the focus on the work. Remove blame, insults, self-defense, and over-sanitized corporate language.
+6. Add a distinct worries-and-failures section. State each concern honestly with its plan, owner, and next action.
+7. Surface possible bad news early and confirm it when known. Never delay urgent or required disclosure to improve the narrative.
+8. If cadence is optional, prefer a real headline within a bounded window over empty scheduled mail. Keep any required or agreed reporting schedule.
+
+Plan the next update's likely headline before the reporting date. Create pleasant surprises through real delivery, never through hidden work or lowered expectations.
+
 ## Step 5 — quick checks (before delivering)
 
 - Any adverbs? Cut, or swap in a stronger verb or the number.
@@ -143,4 +158,4 @@ If the text is a stakeholder communication, workplace message, negotiation, esca
 
 Before/after transformations: [references/examples.md](references/examples.md). Full AI-tells catalog with examples: [references/ai-tells.md](references/ai-tells.md).
 
-Merged from: stop-slop by Hardik Pandya (hvpandya.com, MIT), humanizer (github.com/blader/humanizer, based on Wikipedia:Signs of AI writing), an ASD-STE100 distillation, and selected checks from unslop (pstack, github.com/cursor/plugins, MIT, Lauren Tan).
+Merged from: stop-slop by Hardik Pandya (hvpandya.com, MIT), humanizer (github.com/blader/humanizer, based on Wikipedia:Signs of AI writing), an ASD-STE100 distillation, selected checks from unslop (pstack, github.com/cursor/plugins, MIT, Lauren Tan), and Slava Akhmechet's [status-update advice](https://x.com/spakhm/status/2093168407415816478).

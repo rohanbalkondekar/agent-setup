@@ -1,6 +1,6 @@
 ---
 name: powerlaw
-description: Leverage and workplace-strategy skill with two modes. RANK mode — prioritize any set of tasks, options, backlog items, or opportunities by power-law leverage (80/20, Pareto-squared 64/4, 10x-is-easier-than-2x, theory of constraints, compounding, asymmetric bets) and the Eisenhower matrix; use when the user asks "where should I contribute", "what matters most", "per power law", "rank my backlog", "what's the 20%", "help me prioritize", "eisenhower", is overwhelmed or juggling conflicting priorities, planning a day or week, or weighing do/defer/delegate/drop. POWER-CHECK mode — run stakeholder communications, emails, Slack messages, meeting plans, or any people/politics work situation through the 48 Laws of Power plus strategy lenses (Eisenhower, 80/20, 10x-vs-2x, boss-axis, five career failure modes), flagging violations, risks, and missed opportunities as defensive awareness and practical influence, never manipulation; use when the user asks to "power-check", "48 laws", review stakeholder comms, or wants a political/strategic read before acting.
+description: Leverage and workplace-strategy skill with two modes. RANK mode — prioritize tasks, options, backlogs, or opportunities by power-law leverage (80/20, Pareto-squared 64/4, 10x-is-easier-than-2x, theory of constraints, compounding, asymmetric bets) and the Eisenhower matrix; use when the user asks "where should I contribute", "what matters most", "per power law", "rank my backlog", "what's the 20%", "help me prioritize", "eisenhower", is overwhelmed, plans a day or week, or weighs do/defer/delegate/drop. POWER-CHECK mode — run stakeholder communications, emails, Slack messages, meeting plans, or people/politics situations through the 48 Laws of Power plus strategy lenses (Eisenhower, 80/20, 10x-vs-2x, boss-axis, five career failure modes), flagging violations, risks, and missed opportunities as defensive awareness and practical influence, never manipulation; use when the user asks to "power-check", "48 laws", review stakeholder comms, or wants a political or strategic read.
 ---
 
 # Power Law — leverage razors and workplace power check
@@ -98,6 +98,17 @@ Severity ordering in the report: Violations first, then Risks, then Opportunitie
 
 The laws check HOW the move is made. These check WHETHER it's the right move at all. Report findings under a `### Strategy lenses` heading between Opportunities and Verdict; skip any lens that genuinely doesn't apply.
 
+**Update stewardship** — when the act is a project, investor, executive, or cross-team update, check whether it builds evidence that the user is a trustworthy steward of what others entrusted to them. Apply these rules:
+
+- Start with a one-sentence headline, then recap the project's goal in 2–4 sentences. Assume a smart, busy audience with little current context.
+- Answer the three questions the audience cares about most. Infer them from questions, decisions, incentives, risks, and prior conversations; do not rely only on asking directly.
+- Report evidence of fulfilling the role, not a list of completed work. Make the next update's likely headline explicit and work toward it.
+- Prefer bounded irregularity when cadence is optional: send when there is a real headline, roughly within an expected window. Keep any cadence required by law, contract, governance, incident response, or an explicit stakeholder agreement.
+- Create legitimate pleasant surprises through useful delivery. Never sandbag, hide work, or manipulate expectations to manufacture one.
+- Prevent unpleasant surprises. Pre-wire affected people before group disclosure when time permits. For a possible problem, state the risk early and confirm it later; never delay urgent, material, legal, compliance, security, safety, or incident news.
+- Explain every material change from the prior update. An acknowledged change is new information; an unexplained change looks like a broken promise.
+- Use a calm, factual tone. Keep the focus on the work, avoid blame and insults, and include a clear worries-and-failures section with an honest plan.
+
 **Eisenhower** — classify the act itself using the quadrants from Rank mode. Check: is the user about to spend prime energy on a Q3 task because it feels urgent? Is a Q2 act (relationship-building, system-building, the one-pager that kills a class of asks) being deferred again?
 
 **80/20 and the power law** — apply the razors above to the act. What is the leverage per keystroke — does a 30-second message unlock four downstream items, or does an hour of effort move nothing? When comparing options, weigh the single dominant outcome (best or catastrophic) rather than averaging: which branch, if it happens, dwarfs everything else? Never negotiate away a position to protect a low-probability upside.
@@ -152,3 +163,5 @@ Top changes: 1. … 2. … 3. …
 ### Hard stop
 
 If the situation touches HR, legal, compliance, security incidents, safety, harassment, or formal performance/disciplinary processes: skip the 48-laws lens entirely. There, the only advice is full candor, required disclosure, a preserved written record, and escalation to the proper owner — never strategic omission or timing games.
+
+Update-stewardship guidance adapted from Slava Akhmechet's [status-update advice](https://x.com/spakhm/status/2093168407415816478).
