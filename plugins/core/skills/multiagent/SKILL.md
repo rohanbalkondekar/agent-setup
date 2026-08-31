@@ -1,5 +1,5 @@
 ---
-name: multi-agent
+name: multiagent
 description: Orchestrate multi-step work with a tracked scope, parallel agents where useful, explicit ownership, evidence-based validation, and final review. Use for multi-step implementation, independent parallel tasks, migrations, audits, or requests to delegate, fan out, or coordinate agents. Do not self-delegate when the active runtime or repository instructions forbid it.
 ---
 

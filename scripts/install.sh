@@ -31,7 +31,18 @@ link_skill() {
   printf 'Linked %s\n' "$target_path"
 }
 
-for skill in multi-agent redpen power-law grill-me; do
+for legacy in multi-agent power-law grill-me; do
+  for dir in "$claude_dir" "$codex_dir"; do
+    if [[ -L "$dir/$legacy" ]]; then
+      rm "$dir/$legacy"
+      printf 'Removed legacy link %s\n' "$dir/$legacy"
+    fi
+  done
+done
+
+skills="${AGENT_SETUP_SKILLS:-multiagent redpen powerlaw grillme prove-it show-me-your-work wizard blast-radius}"
+
+for skill in $skills; do
   link_skill "$claude_dir" "$skill"
   link_skill "$codex_dir" "$skill"
   link_skill "$prime_dir" "$skill"
@@ -54,8 +65,31 @@ link_global() {
   printf 'Linked global instructions at %s\n' "$target_path"
 }
 
-link_global "${CODEX_HOME:-$HOME/.codex}/AGENTS.md"
-link_global "$HOME/.claude/CLAUDE.md"
-link_global "$prime_home/AGENTS.md"
+# Set AGENT_SETUP_GLOBAL=0 on machines that keep a private CLAUDE.md/AGENTS.md
+# instead of linking the shared base.
+if [[ "${AGENT_SETUP_GLOBAL:-1}" == "1" ]]; then
+  link_global "${CODEX_HOME:-$HOME/.codex}/AGENTS.md"
+  link_global "$HOME/.claude/CLAUDE.md"
+  link_global "$prime_home/AGENTS.md"
+fi
+
+# Third-party plugins installed from their own marketplaces, not vendored here,
+# so they keep updating from upstream. Best-effort: skip quietly if the CLI is
+# missing or the plugin is already installed.
+plugins="${AGENT_SETUP_PLUGINS:-DietrichGebert/ponytail=ponytail@ponytail}"
+
+for entry in $plugins; do
+  marketplace="${entry%%=*}"
+  plugin="${entry#*=}"
+  if command -v claude >/dev/null 2>&1; then
+    claude plugin marketplace add "$marketplace" >/dev/null 2>&1 || true
+    claude plugin install "$plugin" >/dev/null 2>&1 || true
+  fi
+  if command -v codex >/dev/null 2>&1; then
+    codex plugin marketplace add "$marketplace" >/dev/null 2>&1 || true
+    codex plugin add "$plugin" >/dev/null 2>&1 || true
+  fi
+  printf 'Plugin %s: install attempted for available CLIs\n' "$plugin"
+done
 
 "$repo_dir/scripts/verify.sh"

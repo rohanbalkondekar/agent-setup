@@ -194,7 +194,7 @@ Source: [blader/humanizer](https://github.com/blader/humanizer), based on [Wikip
 
 ### 15. Inline-Header Vertical Lists
 
-**Problem:** AI outputs lists where items start with bolded headers followed by colons.
+**Problem:** AI outputs lists where items start with bolded headers followed by colons. The tell is a bold label that restates the line after it. A bold lead-in that ends in a period, names the item, and is followed by genuinely new detail ("**Schema in TypeScript.** Tables live in one file.") is fine, not a tell.
 
 **Before:**
 > - **User Experience:** The user experience has been significantly improved with a new interface.

@@ -10,8 +10,6 @@ Before cutting a "fancy" word or a softener, run this test:
 
 ## The canonical illustration
 
-An executive assistant at a top firm says:
-
 | Plain | Elevated | What the elevated version carries |
 |-------|----------|-----------------------------------|
 | "Your meeting is at his house at 5" | "Your meeting has been arranged at his residence at 5 pm" | Respect for the host; the meeting matters |
@@ -23,6 +21,13 @@ Each right-column phrase costs more words and would fail the skill's core
 rules (passive voice, softeners, formality). All of them survive the intent
 test: the extra words do work the plain version can't. Stripping them makes
 the text shorter and worse.
+
+Why it matters: the words reflect on more than the writer. The assistant's
+language elevated the person, the institution, the position, and the meeting
+itself — a 10x impression from someone costing a fraction of the partner's
+rate. In relational text, word choice is the reader's cheapest signal of the
+sender's caliber, and small upgrades compound: the reader remembers them
+years later.
 
 ## Contrast with actual slop
 
