@@ -6,3 +6,7 @@
 secrets/
 private/
 __pycache__/
+
+# Workspace profiles are local; the shared base is versioned.
+/profiles/*/
+!/profiles/base/
