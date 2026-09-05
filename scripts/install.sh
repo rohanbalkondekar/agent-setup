@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+set -f # Treat configured names literally, including wildcard characters.
 
 repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 skills_dir="$repo_dir/plugins/core/skills"
@@ -25,14 +26,14 @@ done
 mkdir -p "$codex_dir" "$claude_dir" "$prime_dir"
 
 link_file() {
-  local source_path=$1 target_path=$2 backup_dir
+  local source_path=$1 target_path=$2 backup_path
   if [[ -L "$target_path" && "$(readlink "$target_path")" == "$source_path" ]]; then
     return
   fi
   if [[ -e "$target_path" || -L "$target_path" ]]; then
-    backup_dir=$(mktemp -d "${target_path}.backup.XXXXXXXX")
-    mv "$target_path" "$backup_dir/original"
-    printf 'Backed up %s to %s/original\n' "$target_path" "$backup_dir"
+    backup_path="${target_path}.backup.$(date +%Y%m%d%H%M%S).$$"
+    mv "$target_path" "$backup_path"
+    printf 'Backed up %s to %s\n' "$target_path" "$backup_path"
   fi
   ln -s "$source_path" "$target_path"
   printf 'Linked %s\n' "$target_path"

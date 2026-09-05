@@ -57,7 +57,3 @@ Replace `<skill-directory>` with this skill's location. Treat findings as sugges
 Return the requested text. Add explanations or a score only when asked or when a material ambiguity needs to be disclosed. Drafting does not authorize sending or publishing.
 
 Use `powerlaw` only when the user asks for a strategic review or the task materially depends on workplace influence. Ordinary messages and personal relationship repair do not require a political analysis. If that skill is unavailable, complete the prose edit and state any material limitation.
-
-## Credits
-
-Merged from: stop-slop by Hardik Pandya (hvpandya.com, MIT), humanizer (github.com/blader/humanizer, based on Wikipedia:Signs of AI writing), an ASD-STE100 distillation, selected checks from unslop (pstack, github.com/cursor/plugins, MIT, Lauren Tan), and Slava Akhmechet's [status-update advice](https://x.com/spakhm/status/2093168407415816478).

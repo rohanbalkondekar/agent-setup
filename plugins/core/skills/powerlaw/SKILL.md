@@ -29,8 +29,8 @@ Treat these lenses as prompts for judgment. Do not force a drop list, a 10x refr
    - **Vital few (~top 20%)** — disproportionate outcome share; do these.
    - **Middle** — real but linear payoff; delegate, batch, or timebox.
    - **Trivial many** — effort ≈ outcome or worse; explicitly kill or ignore. Recommend dropping an item only when evidence supports it. Keep required work even when its payoff is indirect.
-5. **10x reframe:** pick at least one item and ask what the 10x version looks like. 10x beats 2x because 2x competes with everyone doing the default thing harder; 10x forces a different method, and different methods are usually *less* crowded, not more. If the 10x version is unreachable, say so and why.
-6. **Deliver:** ranked list with one-line "why" each, the kill-list, the 10x reframe, and the single next action for the #1 item. Name the meta-insight when it applies: an all-Q1 day means too little Q2 last week — coach toward more Q2 so less explodes into Q1.
+5. **10x reframe:** when useful, consider whether a different method could produce a much larger result. 10x beats 2x because 2x competes with everyone doing the default thing harder; 10x forces a different method, and different methods are usually *less* crowded, not more. If the 10x version is unreachable, say so and why.
+6. **Deliver:** ranked list with one-line "why" each, any supported drop recommendations or reframes, and the single next action for the #1 item. Name the meta-insight when it applies: an all-Q1 day means too little Q2 last week — coach toward more Q2 so less explodes into Q1.
 
 ### Coaching rules
 
@@ -69,8 +69,8 @@ Keep it tight:
 2. **Constraint** (one line — what actually gates the system).
 3. **Quadrant summary** (one line per non-empty quadrant).
 4. **Vital few** — ranked, one-line why + next action each.
-5. **Kill / ignore list** — with one-line permission-to-drop rationale.
-6. **10x reframe** — one item, the method change, what it would obsolete.
+5. **Drop recommendations, when supported** — with a one-line rationale.
+6. **Reframe, when useful** — the method change and what it would replace.
 
 ## Power-check mode
 

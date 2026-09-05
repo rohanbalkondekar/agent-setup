@@ -21,7 +21,7 @@ Coordinate the work. Do not treat delegation as proof of completion.
 
 - Keep architecture, naming, UX judgment, ambiguous requirements, and tiny edits in the orchestrator.
 - Delegate frozen-spec implementation, mechanical refactors, known-reproduction fixes, test writing, dependency work, and bounded exploration.
-- Prefer the cheapest available model that meets the quality bar. Read the runtime's current model catalog instead of hard-coding model names or prices here.
+- Honor the user's requested reviewer model. Otherwise, choose the cheapest available model that meets the quality bar using the runtime's current model catalog.
 - Use the same worker for follow-up fixes when the runtime preserves its context.
 - After two failed worker attempts, narrow the problem, raise the model capability, or take over.
 
@@ -50,7 +50,7 @@ Assume a worker has no session context. Include:
 - Inspect repository status and the complete diff.
 - Run focused checks, then the broad gate appropriate to the change.
 - Verify live state when the request concerns a deployment or external system.
-- For an independent Fable review, use `claude-fable-5-1`, not `claude-fable-5` or `fable`. For CLI reviews, request JSON and require `modelUsage` to report `claude-fable-5-1`.
+- For an independent Fable review, select `claude-fable-5-1`. For reviews through the Claude Code CLI, request JSON output and verify that `modelUsage` reports `claude-fable-5-1` before marking the review complete.
 - Treat worker summaries as leads, not evidence.
 - Report each deliverable as done, in progress, or blocked, with the proof or blocker.
 

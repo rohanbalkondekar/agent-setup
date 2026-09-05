@@ -28,8 +28,7 @@ The installer links skills into `~/.claude/skills`, `~/.codex/skills`, and
 `~/.prime/agent/skills`. It also links [the shared base](profiles/base/AGENTS.md)
 to each runtime's global instruction file.
 
-Existing conflicting files and directories move into unique `.backup.*` directories
-beside their original locations. Correct links stay untouched on subsequent runs.
+Existing conflicting files and directories move to adjacent `.backup.<timestamp>.<process-id>` paths. Correct links stay untouched on subsequent runs.
 Keep this checkout in place; moving or deleting it breaks the links.
 Restart active agent sessions after changing the source files.
 
@@ -54,21 +53,37 @@ AGENT_SETUP_GLOBAL=0 AGENT_SETUP_PLUGINS='' ./scripts/install.sh
 Use the same skill and global overrides when running verification. Selecting fewer skills
 only changes which links are installed and checked; it does not uninstall existing skills.
 
-## Scope profiles
+## Local workspace instructions
+
+Supply any Markdown instruction file and the workspace that should use it:
 
 ```sh
-./scripts/install-scope.sh personal <workspace-directory>
-./scripts/install-scope.sh outsight <workspace-directory>
-./scripts/install-scope.sh work <workspace-directory>
+./scripts/install-scope.sh "$HOME/.config/agent-setup/team/AGENTS.md" /path/to/workspace
 ```
 
-`personal` uses the shared base. `outsight` and `work` add their respective scope rules.
-The separate personal profile has been removed.
+Create that file with your own project or company rules before running the command.
+Keep private profiles outside this checkout, or in its ignored `private/` directory.
+Each person chooses their own names and locations; the installer has no named scope presets.
+The script links to these instruction files; it does not execute their contents.
+
+From the checkout root, use the public shared base for a workspace:
+
+```sh
+./scripts/install-scope.sh profiles/base/AGENTS.md /path/to/workspace
+```
 
 The script preserves existing `AGENTS.md` and `CLAUDE.md` files. When both are absent,
-it links `AGENTS.md` to the selected profile and `CLAUDE.md` to that `AGENTS.md`.
-When repository instructions already exist, it only adds the missing Claude link.
-Install profiles at the repository roots where you need them.
+it links `AGENTS.md` to your instruction file and `CLAUDE.md` to that `AGENTS.md`.
+Updates to your source file flow through those links. Keep the source file in place.
+Existing repository rules stay in control; review them directly when they need changes.
+Install instructions at the repository roots where you need them.
+
+Before updating an older checkout, copy any workspace profiles you use to a private location
+and repoint their workspace links. Git removes the previously tracked `personal`, `outsight`,
+and `work` profiles when this change is pulled. Ignoring a path does not preserve a tracked file.
+Local profiles explicitly retained under `profiles/` remain ignored; only `profiles/base/` is versioned.
+The installer now takes file paths in place of the previous named-scope arguments.
+It reports empty or dangling existing instructions before creating links. Restore the file or manually repoint the existing symlink, then rerun.
 
 ## Update and verify
 
@@ -111,5 +126,8 @@ source, documentation, and versioned configuration belong in files.
 
 ## License and sources
 
-MIT License. Skills retain their source credits and reference material.
-Redpen includes adaptations inspired by Stop Slop, Humanizer, and ASD-STE100 guidance.
+MIT License. Source credits are kept here for attribution and future upstream reviews.
+
+### Redpen sources
+
+Merged from: stop-slop by Hardik Pandya (hvpandya.com, MIT), humanizer (github.com/blader/humanizer, based on Wikipedia:Signs of AI writing), an ASD-STE100 distillation, selected checks from unslop (pstack, github.com/cursor/plugins, MIT, Lauren Tan), and Slava Akhmechet's [status-update advice](https://x.com/spakhm/status/2093168407415816478).
