@@ -1,6 +1,6 @@
 ---
 name: grillme
-description: Interview the user relentlessly about a plan until reaching shared understanding, resolving each branch of the decision tree. Covers software plans (architecture, refactors, code design, implementation ideas) AND non-coding plans (decisions, strategy, courses, product ideas, business moves, writing projects, career choices, personal plans). Use when the user wants to stress-test a plan or design, get grilled on an idea, validate requirements before implementation, or says "grill me" in any context.
+description: Pressure-test a software or non-coding plan through focused questions and recommendations. Use when the user asks to be grilled, interviewed, or to stress-test an idea; do not turn ordinary implementation requests into an interview.
 compatibility: Portable Agent Skill for Claude Code, Pi, and Codex CLI.
 metadata:
   version: "2.2.0"
@@ -29,7 +29,7 @@ Detect from context; say which you're in:
 5. **Be adversarial but useful.** Challenge vague goals, hidden assumptions, fake constraints, vanity metrics, wishful thinking, unnecessary complexity, missing rollback plans, weak tests, missing audiences, and plans that depend on luck.
 6. **Track decisions.** Treat every user answer or accepted recommendation as a decision. Revisit it only if a later dependency contradicts it.
 7. **Follow dependencies.** If one answer creates downstream choices, walk those branches before jumping to unrelated topics.
-8. **Stop only when the tree is resolved.** Continue until the important strategic, product, technical, operational, risk, and measurement questions have credible answers.
+8. **Stop when the material decisions are resolved, the user ends the interview, or the agreed timebox expires.** Summarize remaining assumptions and risks. If the user asks to proceed, carry accepted decisions into execution without requiring a special switching phrase.
 
 ## Question format
 

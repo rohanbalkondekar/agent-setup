@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+trap 'printf "Verification failed at line %s: %s\n" "$LINENO" "$BASH_COMMAND" >&2' ERR
 
 repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 skills_dir="$repo_dir/plugins/core/skills"
@@ -30,4 +31,4 @@ if [[ "${AGENT_SETUP_GLOBAL:-1}" == "1" ]]; then
   cmp -s "$prime_home/AGENTS.md" "$global_instructions"
 fi
 
-printf 'Claude Code, Codex, and Prime Agent use the shared skills and global instructions.\n'
+printf 'Selected skill links verified for Claude Code, Codex, and Prime Agent (global instructions checked: %s).\n' "${AGENT_SETUP_GLOBAL:-1}"

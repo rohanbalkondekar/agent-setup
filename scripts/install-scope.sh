@@ -14,7 +14,8 @@ target_dir=$2
 profile_file="$repo_dir/profiles/$profile/AGENTS.md"
 
 case "$profile" in
-  personal|outsight|work) ;;
+  personal) profile_file="$repo_dir/profiles/base/AGENTS.md" ;;
+  outsight|work) ;;
   *) usage ;;
 esac
 

@@ -1,6 +1,6 @@
 ---
 name: powerlaw
-description: Leverage and workplace-strategy skill with two modes. RANK mode — prioritize tasks, options, backlogs, or opportunities by power-law leverage (80/20, Pareto-squared 64/4, 10x-is-easier-than-2x, theory of constraints, compounding, asymmetric bets) and the Eisenhower matrix; use when the user asks "where should I contribute", "what matters most", "per power law", "rank my backlog", "what's the 20%", "help me prioritize", "eisenhower", is overwhelmed, plans a day or week, or weighs do/defer/delegate/drop. POWER-CHECK mode — run stakeholder communications, emails, Slack messages, meeting plans, or people/politics situations through the 48 Laws of Power plus strategy lenses (Eisenhower, 80/20, 10x-vs-2x, boss-axis, five career failure modes), flagging violations, risks, and missed opportunities as defensive awareness and practical influence, never manipulation; use when the user asks to "power-check", "48 laws", review stakeholder comms, or wants a political or strategic read.
+description: Prioritize tasks and options by impact, urgency, and constraints, or review workplace communications for strategic risks. Use for backlog ranking, leverage analysis, power checks, and explicit requests for a workplace strategy review.
 ---
 
 # Power Law — leverage razors and workplace power check
@@ -11,6 +11,8 @@ Two modes. Pick by input, say which you're running:
 - **Power-check** — the input is a communication or situation (draft message, email, meeting plan, political read). Run the 48 laws + strategy lenses; flag what fires, fix it, rewrite the draft.
 
 A draft about *choosing between options* may need both: power-check the wording, rank the underlying options.
+
+Treat these lenses as prompts for judgment. Do not force a drop list, a 10x reframe, or a political finding when the evidence does not support one. Required work stays in scope; label assumptions about other people instead of asserting motives.
 
 ## Rank mode
 
@@ -26,7 +28,7 @@ A draft about *choosing between options* may need both: power-check the wording,
 4. **Score within quadrants against the razors** below. Don't score theatrically (no fake numbers); sort into three buckets:
    - **Vital few (~top 20%)** — disproportionate outcome share; do these.
    - **Middle** — real but linear payoff; delegate, batch, or timebox.
-   - **Trivial many** — effort ≈ outcome or worse; explicitly kill or ignore. Naming the kill-list is mandatory — a prioritization that drops nothing is a failure.
+   - **Trivial many** — effort ≈ outcome or worse; explicitly kill or ignore. Recommend dropping an item only when evidence supports it. Keep required work even when its payoff is indirect.
 5. **10x reframe:** pick at least one item and ask what the 10x version looks like. 10x beats 2x because 2x competes with everyone doing the default thing harder; 10x forces a different method, and different methods are usually *less* crowded, not more. If the 10x version is unreachable, say so and why.
 6. **Deliver:** ranked list with one-line "why" each, the kill-list, the 10x reframe, and the single next action for the #1 item. Name the meta-insight when it applies: an all-Q1 day means too little Q2 last week — coach toward more Q2 so less explodes into Q1.
 
@@ -39,7 +41,7 @@ A draft about *choosing between options* may need both: power-check the wording,
 
 ### The razors
 
-- **Pareto / power law:** outcomes across options are power-law distributed — a few options carry most of the value. Corollary (Pareto squared): 20% of the 20% → ~4% of inputs give ~64% of output. Always ask "what's the 20% of the 20%?"
+- **Pareto / power law:** look for a few options that carry much of the value. Treat 80/20 and 64/4 as heuristics, not measured ratios or universal distributions. Use actual evidence when available.
 - **10x > 2x (Sullivan/Hardy, Teller):** 2x goals are achieved by doing more of the same; 10x goals can only be achieved by changing the method — which eliminates most of the task list automatically. 10x filters harder than it demands.
 - **Theory of constraints (Goldratt):** the system's output is set by its bottleneck. Work anywhere else is invisible. Identify the constraint before ranking anything.
 - **Amdahl's law:** improving a part caps out at that part's share of the whole. A 90% speedup of a 5% component is noise.
@@ -57,7 +59,7 @@ A draft about *choosing between options* may need both: power-check the wording,
 - **Bottleneck blindness:** polishing a non-constraint because it's tractable or fun.
 - **2x-by-default:** framing every improvement as "do the current thing better." Ask for the method change.
 - **Urgency capture:** ranking by loudness/recency instead of outcome share (urgent ≠ important).
-- **Unkilled zombies:** prioritized lists where nothing was dropped.
+- **Unexamined carryover:** items kept without checking whether they still serve the goal.
 
 ### Rank output format
 
