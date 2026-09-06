@@ -65,7 +65,7 @@ fi
 # Third-party plugins installed from their own marketplaces, not vendored here,
 # so they keep updating from upstream. Best-effort: skip quietly if the CLI is
 # missing or the plugin is already installed.
-plugins="${AGENT_SETUP_PLUGINS-DietrichGebert/ponytail=ponytail@ponytail}"
+plugins="${AGENT_SETUP_PLUGINS-}"
 
 for entry in $plugins; do
   marketplace="${entry%%=*}"

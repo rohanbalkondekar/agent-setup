@@ -40,14 +40,14 @@ The scripts configure runtime directories. They do not install or authenticate t
 |---|---|---|
 | `AGENT_SETUP_SKILLS` | All eight skills above | Select a space-separated list of skill names. Invalid selections fail before installation. |
 | `AGENT_SETUP_GLOBAL` | `1` | Set to `0` to preserve private global instruction files. |
-| `AGENT_SETUP_PLUGINS` | `DietrichGebert/ponytail=ponytail@ponytail` | Set to an empty string to skip third-party plugin installation. |
+| `AGENT_SETUP_PLUGINS` | `(empty)` | Opt in to third-party plugins with `owner/repo=plugin@marketplace` entries. |
 | `CODEX_HOME` | `~/.codex` | Override the Codex configuration directory. |
 | `PRIME_AGENT_CODING_AGENT_DIR` | `~/.prime/agent` | Override the Prime Agent configuration directory. |
 
-For example, install shared skills while preserving private global instructions and skipping plugins:
+For example, install shared skills while preserving private global instructions:
 
 ```sh
-AGENT_SETUP_GLOBAL=0 AGENT_SETUP_PLUGINS='' ./scripts/install.sh
+AGENT_SETUP_GLOBAL=0 ./scripts/install.sh
 ```
 
 Use the same skill and global overrides when running verification. Selecting fewer skills
@@ -108,8 +108,10 @@ These checks use temporary runtime homes and stub plugin commands. They do not c
 
 ## Third-party plugins
 
-The installer attempts to install [Ponytail](https://github.com/DietrichGebert/ponytail)
-through each available `claude` and `codex` CLI. Plugin installation is best-effort;
+No third-party plugins are installed by default. The shared instructions say:
+“Follow YAGNI principles, and prefer one-liner solutions.”
+
+Opted-in plugins install through each available `claude` and `codex` CLI. Plugin installation is best-effort;
 an attempted installation is not proof of success. Plugins remain managed by their upstream marketplaces.
 
 Use `AGENT_SETUP_PLUGINS="owner/repo=plugin@marketplace ..."` to select plugins, or an empty string to skip them.

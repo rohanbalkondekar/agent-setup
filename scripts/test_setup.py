@@ -22,9 +22,11 @@ def main():
             stub.chmod(0o755)
         env = dict(os.environ, HOME=str(home), CODEX_HOME=str(home / ".codex"),
                    PRIME_AGENT_CODING_AGENT_DIR=str(home / ".prime/agent"),
-                   AGENT_SETUP_PLUGINS="", AGENT_SETUP_GLOBAL="1",
+                   AGENT_SETUP_GLOBAL="1",
                    AGENT_SETUP_SKILLS="redpen prove-it", PLUGIN_CALLS=str(calls),
                    PATH=f"{bin_dir}:{os.environ.get('PATH', os.defpath)}")
+
+        env.pop("AGENT_SETUP_PLUGINS", None)
 
         def run(script, *args, ok=True, **overrides):
             result = subprocess.run(["bash", str(REPO / "scripts" / script), *map(str, args)],
@@ -41,12 +43,17 @@ def main():
         skill.mkdir(parents=True)
         (skill / "custom.txt").write_text("keep me")
         run("install.sh")
-        assert not calls.exists(), "Empty plugin override must skip all plugin calls"
+        assert not calls.exists(), "Default installation must skip all plugin calls"
         backups = list(skill.parent.glob("redpen.backup.*/custom.txt"))
         assert len(backups) == 1 and backups[0].read_text() == "keep me"
         assert skill.resolve() == REPO / "plugins/core/skills/redpen"
         run("install.sh")
         assert len(list(skill.parent.glob("redpen.backup.*"))) == 1
+
+        run("install.sh", AGENT_SETUP_PLUGINS="")
+        assert not calls.exists(), "Empty plugin override must skip all plugin calls"
+        run("install.sh", AGENT_SETUP_PLUGINS="owner/repo=example@marketplace")
+        assert calls.read_text().splitlines() == ["called"] * 4
 
         # Private globals remain intact when global linking is disabled.
         global_file = home / ".codex/AGENTS.md"
