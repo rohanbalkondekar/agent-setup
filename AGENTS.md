@@ -1,1 +1,1 @@
-profiles/personal/AGENTS.md
+profiles/base/AGENTS.md

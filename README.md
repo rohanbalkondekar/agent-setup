@@ -25,8 +25,9 @@ cd agent-setup
 ```
 
 The installer links skills into `~/.claude/skills`, `~/.codex/skills`, and
-`~/.prime/agent/skills`. It also links [the shared base](profiles/base/AGENTS.md)
-to each runtime's global instruction file.
+`~/.prime/agent/skills`. It links [the shared base](profiles/base/AGENTS.md)
+where a runtime has no global instruction file. It preserves existing valid instructions.
+The shared rules cover expert judgment, explicit trade-offs, YAGNI, verification, and ASD-STE100 writing.
 
 Existing conflicting files and directories move to adjacent `.backup.<timestamp>.<process-id>` paths. Correct links stay untouched on subsequent runs.
 Keep this checkout in place; moving or deleting it breaks the links.
@@ -39,12 +40,13 @@ The scripts configure runtime directories. They do not install or authenticate t
 | Variable | Default | Effect |
 |---|---|---|
 | `AGENT_SETUP_SKILLS` | All eight skills above | Select a space-separated list of skill names. Invalid selections fail before installation. |
-| `AGENT_SETUP_GLOBAL` | `1` | Set to `0` to preserve private global instruction files. |
+| `AGENT_SETUP_GLOBAL` | `auto` | Preserve existing instructions and link missing ones. Set `0` to skip globals, or `1` to back up and replace them. |
 | `AGENT_SETUP_PLUGINS` | `(empty)` | Opt in to third-party plugins with `owner/repo=plugin@marketplace` entries. |
+| `CLAUDE_CONFIG_DIR` | `~/.claude` | Override the Claude Code configuration directory. |
 | `CODEX_HOME` | `~/.codex` | Override the Codex configuration directory. |
 | `PRIME_AGENT_CODING_AGENT_DIR` | `~/.prime/agent` | Override the Prime Agent configuration directory. |
 
-For example, install shared skills while preserving private global instructions:
+For example, install shared skills without creating or changing global instructions:
 
 ```sh
 AGENT_SETUP_GLOBAL=0 ./scripts/install.sh
@@ -78,6 +80,14 @@ Updates to your source file flow through those links. Keep the source file in pl
 Existing repository rules stay in control; review them directly when they need changes.
 Install instructions at the repository roots where you need them.
 
+To use an existing workspace `AGENTS.md` in Claude Code, pass that file as the source:
+
+```sh
+./scripts/install-scope.sh /path/to/workspace/AGENTS.md /path/to/workspace
+```
+
+The script preserves `AGENTS.md` and adds a `CLAUDE.md` link if it is absent.
+
 Before updating an older checkout, copy any workspace profiles you use to a private location
 and repoint their workspace links. Git removes the previously tracked `personal`, `outsight`,
 and `work` profiles when this change is pulled. Ignoring a path does not preserve a tracked file.
@@ -95,7 +105,8 @@ It reports empty or dangling existing instructions before creating links. Restor
 The updater refuses a dirty checkout. After you review and commit or stash local changes,
 it pulls with `--ff-only`, repairs links, and runs verification.
 
-Verification checks the selected shared skill links and, unless disabled, global instruction links.
+Verification checks the selected shared skill links. In `auto` mode, it checks that global instruction files are non-empty and readable.
+Mode `1` also checks that global links point to the shared base. Mode `0` skips global checks.
 It does not verify third-party plugins, workspace profiles, authentication, or agent behavior.
 
 Run the setup regression checks before submitting script changes:

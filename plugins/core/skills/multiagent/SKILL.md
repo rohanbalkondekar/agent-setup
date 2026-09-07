@@ -50,7 +50,7 @@ Assume a worker has no session context. Include:
 - Inspect repository status and the complete diff.
 - Run focused checks, then the broad gate appropriate to the change.
 - Verify live state when the request concerns a deployment or external system.
-- For an independent Fable review, select `claude-fable-5-1`. For reviews through the Claude Code CLI, request JSON output and verify that `modelUsage` reports `claude-fable-5-1` before marking the review complete.
+- Use the requested reviewer model, or choose from the runtime's current model catalog. Check reported model usage for a fallback before claiming that a specific model completed the review.
 - Treat worker summaries as leads, not evidence.
 - Report each deliverable as done, in progress, or blocked, with the proof or blocker.
 

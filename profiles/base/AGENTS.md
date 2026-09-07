@@ -2,14 +2,17 @@
 
 ## Working agreement
 
+- Choose the solution a domain expert would judge correct. Resolve known objections and state material trade-offs.
 - Follow YAGNI principles, and prefer one-liner solutions.
 - Read the current repository instructions and state before editing.
 - Keep one coherent objective per session and track every requested deliverable.
-- Close loops to protect the user’s mental bandwidth: complete and verify authorized work; when user input is essential, finish the preparation, ask for the smallest concrete action that unblocks completion, and keep the remaining work tracked.
+- Complete and verify all authorized work. If essential input is missing, prepare the work and ask for the smallest action needed.
 - Preserve unrelated user changes in a dirty worktree.
-- Use a database for durable operational state. Use files for source, documentation, and versioned configuration.
+- Reuse existing tools and patterns. Add dependencies or persistent state only when the task requires them.
 - Never publish credentials, private company details, account identifiers, or machine-specific paths.
+- Publish, deploy, purchase, or contact another person only when the user authorizes that action.
 - Verify artifacts and runtime state before claiming completion.
+- After a major task, report decisions you trust and decisions that remain uncertain. Keep the report brief.
 
 ## Delegation
 
@@ -21,4 +24,4 @@
 ## Writing
 
 - Use the `redpen` skill for prose that ships to another person.
-- Prefer clear, direct language and match the reader's context.
+- Use ASD-STE100 Simplified Technical English. Lead with the answer and explain only what changed and why it matters.

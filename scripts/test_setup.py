@@ -9,6 +9,8 @@ REPO = Path(__file__).resolve().parents[1]
 
 
 def main():
+    assert (REPO / "AGENTS.md").resolve() == REPO / "profiles/base/AGENTS.md"
+    assert (REPO / "CLAUDE.md").resolve() == REPO / "profiles/base/AGENTS.md"
     with tempfile.TemporaryDirectory(prefix="agent-setup-test-") as tmp:
         root = Path(tmp)
         home = root / "home"
@@ -20,7 +22,9 @@ def main():
             stub = bin_dir / cli
             stub.write_text('#!/bin/sh\nprintf "called\\n" >> "$PLUGIN_CALLS"\n')
             stub.chmod(0o755)
+        claude_home = root / "custom Claude config"
         env = dict(os.environ, HOME=str(home), CODEX_HOME=str(home / ".codex"),
+                   CLAUDE_CONFIG_DIR=str(claude_home),
                    PRIME_AGENT_CODING_AGENT_DIR=str(home / ".prime/agent"),
                    AGENT_SETUP_GLOBAL="1",
                    AGENT_SETUP_SKILLS="redpen prove-it", PLUGIN_CALLS=str(calls),
@@ -38,6 +42,9 @@ def main():
         for selection in ("redpen missing-skill", "../redpen", "*"):
             run("install.sh", ok=False, AGENT_SETUP_SKILLS=selection)
             assert list(home.iterdir()) == []
+            assert not claude_home.exists()
+        run("install.sh", ok=False, AGENT_SETUP_GLOBAL="invalid")
+        assert list(home.iterdir()) == [] and not claude_home.exists()
 
         skill = home / ".codex/skills/redpen"
         skill.mkdir(parents=True)
@@ -47,6 +54,9 @@ def main():
         backups = list(skill.parent.glob("redpen.backup.*/custom.txt"))
         assert len(backups) == 1 and backups[0].read_text() == "keep me"
         assert skill.resolve() == REPO / "plugins/core/skills/redpen"
+        assert (claude_home / "skills/redpen").resolve() == skill.resolve()
+        assert (claude_home / "CLAUDE.md").resolve() == REPO / "profiles/base/AGENTS.md"
+        assert not (home / ".claude").exists(), "Respect CLAUDE_CONFIG_DIR"
         run("install.sh")
         assert len(list(skill.parent.glob("redpen.backup.*"))) == 1
 
@@ -54,6 +64,15 @@ def main():
         assert not calls.exists(), "Empty plugin override must skip all plugin calls"
         run("install.sh", AGENT_SETUP_PLUGINS="owner/repo=example@marketplace")
         assert calls.read_text().splitlines() == ["called"] * 4
+
+        # Remove obsolete links only when they belong to this checkout.
+        legacy = skill.parent / "power-law"
+        legacy.symlink_to(REPO / "plugins/core/skills/power-law")
+        private_legacy = skill.parent / "grill-me"
+        private_legacy.symlink_to(root / "private skill")
+        run("install.sh")
+        assert not legacy.is_symlink()
+        assert private_legacy.is_symlink()
 
         # Private globals remain intact when global linking is disabled.
         global_file = home / ".codex/AGENTS.md"
@@ -63,6 +82,41 @@ def main():
         assert global_file.read_text() == "private instructions"
         result = run("verify.sh", ok=False)
         assert result.stderr.strip(), "Verification failures need a diagnostic"
+
+        # The default preserves private globals and fills only missing ones.
+        env.pop("AGENT_SETUP_GLOBAL")
+        claude_global = claude_home / "CLAUDE.md"
+        claude_global.unlink()
+        private_rules = root / "private instructions.md"
+        private_rules.write_text("private Claude rules")
+        claude_global.symlink_to(private_rules)
+        prime_global = home / ".prime/agent/AGENTS.md"
+        prime_global.unlink()
+        run("install.sh")
+        assert global_file.read_text() == "private instructions"
+        assert claude_global.resolve() == private_rules.resolve()
+        assert prime_global.resolve() == REPO / "profiles/base/AGENTS.md"
+        run("verify.sh")
+        assert not list(global_file.parent.glob("AGENTS.md.backup.*"))
+        assert not list(claude_home.glob("CLAUDE.md.backup.*"))
+
+        # Broken or empty globals fail before any skill links are repaired.
+        skill.unlink()
+        for contents in (None, ""):
+            global_file.unlink()
+            if contents is None:
+                global_file.symlink_to(root / "deleted instructions")
+            else:
+                global_file.write_text(contents)
+            result = run("install.sh", ok=False)
+            assert str(global_file) in result.stderr
+            assert not skill.is_symlink()
+            run("verify.sh", ok=False)
+        global_file.write_text("private instructions")
+        run("install.sh", AGENT_SETUP_GLOBAL="1")
+        assert global_file.resolve() == REPO / "profiles/base/AGENTS.md"
+        assert next(global_file.parent.glob("AGENTS.md.backup.*")).read_text() == "private instructions"
+        assert next(claude_home.glob("CLAUDE.md.backup.*")).resolve() == private_rules.resolve()
 
         # A broken skill link must fail verification even without globals.
         skill.unlink()

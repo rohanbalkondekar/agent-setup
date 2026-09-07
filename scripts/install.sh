@@ -2,28 +2,8 @@
 set -euo pipefail
 set -f # Treat configured names literally, including wildcard characters.
 
-repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-skills_dir="$repo_dir/plugins/core/skills"
-codex_dir="${CODEX_HOME:-$HOME/.codex}/skills"
-claude_dir="$HOME/.claude/skills"
-prime_home="${PRIME_AGENT_CODING_AGENT_DIR:-$HOME/.prime/agent}"
-prime_dir="$prime_home/skills"
-global_instructions="$repo_dir/profiles/base/AGENTS.md"
-
-skills="${AGENT_SETUP_SKILLS:-multiagent redpen powerlaw grillme prove-it show-me-your-work wizard blast-radius}"
-
-# Validate the whole selection before changing any installed files.
-for skill in $skills; do
-  case "$skill" in
-    *[!a-z0-9-]*|-*) printf 'Invalid skill name: %s\n' "$skill" >&2; exit 1 ;;
-  esac
-  if [[ ! -f "$skills_dir/$skill/SKILL.md" ]]; then
-    printf 'Skill not found: %s\n' "$skill" >&2
-    exit 1
-  fi
-done
-
-mkdir -p "$codex_dir" "$claude_dir" "$prime_dir"
+source "$(dirname -- "$0")/settings.sh"
+mkdir -p "${skill_dirs[@]}"
 
 link_file() {
   local source_path=$1 target_path=$2 backup_path
@@ -40,26 +20,32 @@ link_file() {
 }
 
 for legacy in multi-agent power-law grill-me; do
-  for dir in "$claude_dir" "$codex_dir" "$prime_dir"; do
+  for dir in "${skill_dirs[@]}"; do
     if [[ -L "$dir/$legacy" ]]; then
-      rm "$dir/$legacy"
-      printf 'Removed legacy link %s\n' "$dir/$legacy"
+      case "$(readlink "$dir/$legacy")" in
+        "$skills_dir/"*)
+          rm "$dir/$legacy"
+          printf 'Removed legacy link %s\n' "$dir/$legacy" ;;
+      esac
     fi
   done
 done
 
 for skill in $skills; do
-  for dir in "$claude_dir" "$codex_dir" "$prime_dir"; do
+  for dir in "${skill_dirs[@]}"; do
     link_file "$skills_dir/$skill" "$dir/$skill"
   done
 done
 
-# Set AGENT_SETUP_GLOBAL=0 on machines that keep a private CLAUDE.md/AGENTS.md
-# instead of linking the shared base.
-if [[ "${AGENT_SETUP_GLOBAL:-1}" == "1" ]]; then
-  link_file "$global_instructions" "${CODEX_HOME:-$HOME/.codex}/AGENTS.md"
-  link_file "$global_instructions" "$HOME/.claude/CLAUDE.md"
-  link_file "$global_instructions" "$prime_home/AGENTS.md"
+# Preserve valid private instructions by default. Replacement is explicit.
+if [[ "$global_mode" != 0 ]]; then
+  for file in "${instruction_files[@]}"; do
+    if [[ "$global_mode" == auto && -e "$file" ]]; then
+      printf 'Preserved existing %s\n' "$file"
+    else
+      link_file "$global_instructions" "$file"
+    fi
+  done
 fi
 
 # Third-party plugins installed from their own marketplaces, not vendored here,
