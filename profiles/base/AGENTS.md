@@ -2,6 +2,7 @@
 
 ## Working agreement
 
+- Follow YAGNI principles, and prefer one-liner solutions.
 - Read the current repository instructions and state before editing.
 - Keep one coherent objective per session and track every requested deliverable.
 - Close loops to protect the user’s mental bandwidth: complete and verify authorized work; when user input is essential, finish the preparation, ask for the smallest concrete action that unblocks completion, and keep the remaining work tracked.
