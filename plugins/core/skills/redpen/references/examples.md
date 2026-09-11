@@ -1,14 +1,28 @@
 # Before/After Examples
 
+These examples explain editing choices. In coaching mode, quote the issue and explain a possible fix; leave the revision to the writer. Return a full "After" version only when a rewrite is explicitly requested. Do not add facts or change the writer's certainty.
+
+## Coaching: empty adjectives and adverbs
+
+**Draft:** "We made a really impressive improvement to the setup process."
+
+**Feedback:** "Really" adds emphasis without information. "Impressive" adds praise without explaining the change. Cut both and name what improved. Keep a modifier such as "partial" if it describes the actual result.
+
+## Coaching: vocabulary in context
+
+**Draft:** "This is the date we have in mind, but it is not confirmed."
+
+**Feedback:** Your wording is clear. An optional shorter phrase is "tentative date." "Tentative" means proposed but not confirmed. It fits a workplace update and preserves the uncertainty. Do not use "scheduled" if the date is still undecided.
+
 ## Example 1: Throat-Clearing + Binary Contrast
 
 **Before:**
 > "Here's the thing: building products is hard. Not because the technology is complex. Because people are complex. Let that sink in."
 
 **After:**
-> "Building products is hard. Technology is manageable. People aren't."
+> "Building products is hard because people are complex."
 
-**Changes:** Removed opener, binary contrast structure, and emphasis crutch. Direct statements.
+**Changes:** Removed the opener, rhetorical setup, and emphasis crutch. Kept the stated reason without adding a claim about whether technology or people are manageable.
 
 ---
 
@@ -18,9 +32,9 @@
 > "It turns out that most teams struggle with alignment. The uncomfortable truth is that nobody wants to admit they're confused. And that's okay."
 
 **After:**
-> "Teams struggle with alignment. Nobody admits confusion."
+> "Most teams struggle with alignment. Nobody wants to admit they're confused."
 
-**Changes:** Cut hedging ("most"), removed throat-clearing phrases, deleted permission-granting ending.
+**Changes:** Removed the opener and emphasis. Kept "most" because it limits the claim. Kept the distinction between reluctance to admit confusion and whether people actually admit it.
 
 ---
 
@@ -29,10 +43,7 @@
 **Before:**
 > "In today's fast-paced landscape, we need to lean into discomfort and navigate uncertainty with clarity. This matters because your competition isn't waiting."
 
-**After:**
-> "Move faster. Your competition is."
-
-**Changes:** Eliminated jargon entirely. Core message in six words.
+**Feedback:** What action should the team take? Replace "lean into discomfort" and "navigate uncertainty with clarity" with that action. The draft does not establish that the intended action is to move faster.
 
 ---
 
@@ -130,14 +141,14 @@ Strong plans and decisions spend words on what they do NOT cover. Without an exp
 **Before (scope only):**
 > Phase 1 delivers isolated QA environments for the pilot team, a database snapshot strategy, and the tech stack decision.
 
-**After (scope + negative space):**
+**After (only if the writer supplied these scope boundaries):**
 > Phase 1 delivers isolated QA environments for the pilot team, a database snapshot strategy, and the tech stack decision.
 >
 > Out of scope for Phase 1: developer environments (Phase 2), self-serve onboarding (Phase 2), and full replacement of shared staging.
 >
 > Done does not require: every team onboarded, zero shared-staging usage, or agents running unattended.
 
-**Changes:** Two lists most writers skip. "Out of scope" kills scope creep before it starts; "does not require" stops the definition of done from inflating in reviewers' heads. The pattern generalizes: an ADR states what it does NOT decide, a proposal states what the budget does NOT include.
+**Changes:** Two lists most writers skip. "Out of scope" kills scope creep before it starts; "does not require" stops the definition of done from inflating in reviewers' heads. The pattern generalizes: an ADR states what it does NOT decide, a proposal states what the budget does NOT include. Ask for missing scope boundaries; do not invent phase assignments or exclusions.
 
 ---
 
@@ -148,9 +159,9 @@ Two completeness checks for status updates, digests, and reports.
 **Before:**
 > The review agent is saving significant time and the docs integration is much faster. We are also working on the licensing question.
 
-**After:**
-> The review agent saves >5 minutes per merge request (pilot data, 3 teams). The docs integration cut integration time roughly in half — one user reported 2 hours down to 35 minutes ([write-up](link)).
+**After (structure only; fill from facts supplied by the writer):**
+> The review agent saves [measured time] per merge request ([source and sample]). Docs integration takes [measured duration], down from [previous duration] ([source]).
 >
-> Licensing: waiting on the vendor's reply about seat definitions. I will update this thread when it lands.
+> Licensing: [owner] is waiting on [needed answer] from [party]. Next action: [action and date, if known].
 
-**Changes:** Every claim now carries a number or a link — "significant" and "much faster" are claims the reader must take on faith; "5 minutes per MR" and "2 hours down to 35 minutes" are facts they can check. Every open item now carries an owner and a next action, so no reader has to ask "who's on this?"
+**Changes:** "Significant" and "much faster" need evidence. Use measurements and sources supplied by the writer, or qualify the claims to match what was observed. Name the owner and next action when known. Flag missing details; do not invent them or treat placeholders as finished text.
