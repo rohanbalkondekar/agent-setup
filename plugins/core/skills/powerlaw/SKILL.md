@@ -78,6 +78,8 @@ Reviewing a workplace communication or situation through the 48 Laws of Power. T
 
 For drafts, default to coaching. Explain the strategic issue and possible actions so the user can choose and write the response. Short wording examples may explain a fix; do not replace every sentence or supply a full revised draft unless explicitly requested. When used with `redpen`, follow the same coaching or rewrite choice and keep rewrites within the requested scope.
 
+Avoid adjectives and adverbs that add no meaning in feedback, suggestions, and requested rewrites. Keep modifiers that carry facts, uncertainty, scope, or the user's intended meaning.
+
 ### Ethical stance (non-negotiable)
 
 - Use the laws **defensively** (spot when others may be playing them on the user) and **constructively** (clarity, timing, framing, reputation).

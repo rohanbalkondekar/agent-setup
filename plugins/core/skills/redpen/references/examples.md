@@ -22,6 +22,12 @@ Use these examples to explain a change the writer can make. Default to feedback;
 
 ## Clarity: support a claim
 
+**Draft passage:** "We made a really impressive improvement to the setup process."
+
+**Feedback:** "Really" adds emphasis without information. "Impressive" adds praise without explaining the change. Cut both and name what improved. Add a measurement only if you have one. Keep a modifier such as "partial" if it describes the actual result.
+
+## Clarity: support a time-saving claim
+
 **Draft passage:** "The review agent is saving significant time."
 
 **Feedback:** "Significant" gives the reader no basis for judging the result. Add a measurement and its source if you have them. Otherwise, qualify the claim to match what you observed. Do not invent numbers to make the update sound stronger.

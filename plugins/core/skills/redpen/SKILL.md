@@ -41,6 +41,7 @@ Use these criteria to explain suggestions in coaching mode and to make edits whe
 
 - Lead with the point the reader needs. Keep the context needed to understand it.
 - Remove filler, vague emphasis, marketing claims, and repeated conclusions. Replace vague claims with supplied evidence; flag missing evidence instead of inventing numbers.
+- Flag adjectives and adverbs that add no meaning, such as "really impressive" or "extremely seamless." Suggest cutting them instead of substituting other empty modifiers. Do not add them to feedback, suggestions, or requested rewrites. Keep modifiers that carry facts, uncertainty, scope, or the writer's intended meaning.
 - Prefer active voice when the actor matters. Technical subjects are fine: "the parser reads the file." Use passive voice when the actor is unknown or irrelevant.
 - Use familiar words and one name per concept. Preserve domain terms, quoted text, citations, uncertainty, and factual qualifications.
 - Vary sentence length naturally. Use lists for parallel items or steps, without forcing a fixed count or fragmented prose.
