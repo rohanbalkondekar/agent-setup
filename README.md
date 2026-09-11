@@ -8,7 +8,7 @@ The installer links each runtime to this checkout, so they use the same source f
 | Skill | Purpose |
 |---|---|
 | `multiagent` | Coordinate independent tasks and verify the combined result. |
-| `redpen` | Edit prose for clarity while preserving facts, intent, and voice. |
+| `redpen` | Coach prose revisions with explained issues and focused suggestions; rewrite only when asked. |
 | `powerlaw` | Prioritize work or review workplace strategy. |
 | `grillme` | Pressure-test a plan through focused questions. |
 | `prove-it` | Verify the actual output before claiming completion. |

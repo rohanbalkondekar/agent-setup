@@ -8,7 +8,7 @@ description: Prioritize tasks and options by impact, urgency, and constraints, o
 Two modes. Pick by input, say which you're running:
 
 - **Rank** — the input is a set of things the user *could* do (backlog, to-do list, options, "where should I help with X"). Find the vital few, name the trivial many to drop, reframe at least one item as a 10x move. Output decisions, not philosophy.
-- **Power-check** — the input is a communication or situation (draft message, email, meeting plan, political read). Run the 48 laws + strategy lenses; flag what fires, fix it, rewrite the draft.
+- **Power-check** — the input is a communication or situation (draft message, email, meeting plan, political read). Run the 48 laws + strategy lenses; explain the risks and suggest changes the user can make. Rewrite only when explicitly asked.
 
 A draft about *choosing between options* may need both: power-check the wording, rank the underlying options.
 
@@ -76,6 +76,8 @@ Keep it tight:
 
 Reviewing a workplace communication or situation through the 48 Laws of Power. The goal is practical: help the user communicate effectively, protect themselves politically, and avoid unforced errors. This is NOT a manipulation toolkit.
 
+For drafts, default to coaching. Explain the strategic issue and possible actions so the user can choose and write the response. Short wording examples may explain a fix; do not replace every sentence or supply a full revised draft unless explicitly requested. When used with `redpen`, follow the same coaching or rewrite choice and keep rewrites within the requested scope.
+
 ### Ethical stance (non-negotiable)
 
 - Use the laws **defensively** (spot when others may be playing them on the user) and **constructively** (clarity, timing, framing, reputation).
@@ -89,9 +91,9 @@ Reviewing a workplace communication or situation through the 48 Laws of Power. T
 3. **Report only the laws that fire.** Do not pad the report with 48 entries — most laws won't apply to a given input. For each flagged law:
    - `Law N — Name` and whether it's a **Violation**, **Risk** (others may play this on you), or **Opportunity**
    - One or two sentences: what in the input triggers it
-   - A concrete fix: the rewritten sentence, the thing to cut, or the action to take
+   - A concrete suggestion with its reason: what to clarify, cut, or do. Include a short wording example only when it helps the user make the change.
 4. **Run the strategy lenses** (below) on the ACT itself — is this the right move, at the right time, at the right scale — not just the wording.
-5. **Verdict.** End with: overall read in 1–2 sentences, the top 3 changes ranked, and — if the input was a draft — a full revised version incorporating the fixes.
+5. **Verdict.** End with an overall read in 1–2 sentences and the most important changes ranked. Include a revised draft only when the user explicitly requested a rewrite or finished text.
 6. If genuinely nothing fires, say so plainly and note the 1–2 laws that came closest.
 
 Severity ordering in the report: Violations first, then Risks, then Opportunities.
@@ -156,10 +158,9 @@ The mindset behind the lens: believe in something worth doing against the odds, 
 
 ### Verdict
 <1–2 sentence overall read>
-Top changes: 1. … 2. … 3. …
+Priority changes: <only the changes supported by the review, ranked>
 
-### Revised draft
-<full rewrite, only if input was a draft>
+<Include a Revised draft section only when the user explicitly requests a rewrite or finished text; stay within the requested scope.>
 ```
 
 ### Hard stop
