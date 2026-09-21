@@ -14,6 +14,18 @@ A draft about *choosing between options* may need both: power-check the wording,
 
 Treat these lenses as prompts for judgment. Do not force a drop list, a 10x reframe, or a political finding when the evidence does not support one. Required work stays in scope; label assumptions about other people instead of asserting motives.
 
+## Reliability and momentum (both modes)
+
+Check for the senior engineer death spiral. Signs include growing scope, long gaps without reviewable work, vague positive updates, and plans to recover through longer hours. A new role or difficult project alone is not evidence of this pattern.
+
+- Treat colleagues as acting in good faith unless evidence shows otherwise. Do not infer motives or diagnose the user.
+- When this pattern appears, prioritize a small useful result that restores delivery and reduces a teammate's burden. Bugs, documentation, and coordination can qualify.
+- Keep the project goal and accountability. Agree on reduced scope, a next checkpoint, and a return to the larger work; avoid an open-ended support queue.
+- Share unfinished work, blockers, and a specific request for help early. Report what exists, what is uncertain, and the next check.
+- Build a sustainable routine. Reject recovery plans that depend on lost sleep or repeated overtime. Reliability and trust grow through steady delivery.
+
+This is a temporary ranking adjustment when delivery or trust is the constraint. State the trade-off; do not replace healthy ambitious work with busywork. Keep 10x reframes focused on a better method.
+
 ## Rank mode
 
 ### Procedure
@@ -25,7 +37,7 @@ Treat these lenses as prompts for judgment. Do not force a drop list, a 10x refr
    - **Q2 important, not urgent → schedule it.** Highest-value, most-skipped quadrant: planning, deep work, prevention, learning, relationships. Crowded out until it becomes a Q1 emergency. Protect a block.
    - **Q3 urgent, not important → delegate or defer.** Loud but not theirs to do. Hand off, batch, or "after 3pm". Masquerades as Q1 — say *why* it isn't when non-obvious.
    - **Q4 neither → delete.** Busywork, over-polishing. Stop.
-4. **Score within quadrants against the razors** below. Don't score theatrically (no fake numbers); sort into three buckets:
+4. **Score within quadrants against the razors** below, applying the reliability and momentum check when relevant. Don't score theatrically (no fake numbers); sort into three buckets:
    - **Vital few (~top 20%)** — disproportionate outcome share; do these.
    - **Middle** — real but linear payoff; delegate, batch, or timebox.
    - **Trivial many** — effort ≈ outcome or worse; explicitly kill or ignore. Recommend dropping an item only when evidence supports it. Keep required work even when its payoff is indirect.
@@ -51,7 +63,7 @@ Treat these lenses as prompts for judgment. Do not force a drop list, a 10x refr
 - **Hamming question:** "What are the most important problems in your field, and why aren't you working on them?" If the top-ranked item isn't one of the important problems, re-examine the ranking.
 - **Opportunity cost / Hell-yeah-or-no (Sivers):** every yes is a no to the vital few. Mediocre opportunities are the expensive ones because they consume vital-few capacity.
 - **One decision > 100 decisions:** a policy, automation, or standard that removes a recurring class of decisions beats resolving instances one at a time.
-- **Skin in the game / proximity to the outcome:** work whose result is visibly attributable to you compounds career capital; invisible glue work is real but power-law-poor unless made visible (write it up).
+- **Skin in the game / proximity to the outcome:** show the result and credit contributors. Judge support work by the burden or blocker it removes, not by its prestige or visibility alone.
 
 ### Anti-patterns to flag
 
@@ -104,12 +116,14 @@ Severity ordering in the report: Violations first, then Risks, then Opportunitie
 
 The laws check HOW the move is made. These check WHETHER it's the right move at all. Report findings under a `### Strategy lenses` heading between Opportunities and Verdict; skip any lens that genuinely doesn't apply.
 
+**Reliability and momentum** — apply the shared check above when the situation shows stalled delivery or pressure to prove seniority. Report the smallest useful result, help needed, and next checkpoint.
+
 **Update stewardship** — when the act is a project, investor, executive, or cross-team update, check whether it builds evidence that the user is a trustworthy steward of what others entrusted to them. Apply these rules:
 
 - Start with a one-sentence headline, then recap the project's goal in 2–4 sentences. Assume a smart, busy audience with little current context.
 - Answer the three questions the audience cares about most. Infer them from questions, decisions, incentives, risks, and prior conversations; do not rely only on asking directly.
 - Report evidence of fulfilling the role, not a list of completed work. Make the next update's likely headline explicit and work toward it.
-- Prefer bounded irregularity when cadence is optional: send when there is a real headline, roughly within an expected window. Keep any cadence required by law, contract, governance, incident response, or an explicit stakeholder agreement.
+- Prefer bounded irregularity when cadence is optional: send when there is a real headline, roughly within an expected window. If work stalls, share the blocker and next check without waiting for a success headline. Keep any cadence required by law, contract, governance, incident response, or an explicit stakeholder agreement.
 - Create legitimate pleasant surprises through useful delivery. Never sandbag, hide work, or manipulate expectations to manufacture one.
 - Prevent unpleasant surprises. Pre-wire affected people before group disclosure when time permits. For a possible problem, state the risk early and confirm it later; never delay urgent, material, legal, compliance, security, safety, or incident news.
 - Explain every material change from the prior update. An acknowledged change is new information; an unexplained change looks like a broken promise.
@@ -157,6 +171,7 @@ The mindset behind the lens: believe in something worth doing against the odds, 
 
 ### Strategy lenses
 **Eisenhower**: <quadrant + one line> · **80/20 / power law**: <leverage read> · **10x vs 2x**: <right mechanism?> · **Boss-axis**: <whose axes this touches + does it make them successful> · **Failure modes**: <any of the five firing>
+<When relevant, include Reliability and momentum: smallest useful result, help needed, and next checkpoint.>
 
 ### Verdict
 <1–2 sentence overall read>
@@ -170,3 +185,5 @@ Priority changes: <only the changes supported by the review, ranked>
 If the situation touches HR, legal, compliance, security incidents, safety, harassment, or formal performance/disciplinary processes: skip the 48-laws lens entirely. There, the only advice is full candor, required disclosure, a preserved written record, and escalation to the proper owner — never strategic omission or timing games.
 
 Update-stewardship guidance adapted from Slava Akhmechet's [status-update advice](https://x.com/spakhm/status/2093168407415816478).
+
+Reliability-and-momentum guidance adapted from Sunil Pai's [the senior engineer death spiral](https://sunilpai.dev/posts/the-senior-engineer-death-spiral/).
