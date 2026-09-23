@@ -1,6 +1,6 @@
 ---
 name: powerlaw
-description: Prioritize tasks and options by impact, urgency, and constraints, or review workplace communications for strategic risks. Use for backlog ranking, leverage analysis, power checks, and explicit requests for a workplace strategy review.
+description: Prioritize tasks and options by impact, urgency, and constraints, or review workplace communications for strategic risks. Use for backlog ranking, career choices, leverage analysis, power checks, and explicit requests for a workplace strategy review.
 ---
 
 # Power Law — leverage razors and workplace power check
@@ -26,6 +26,20 @@ Check for the senior engineer death spiral. Signs include growing scope, long ga
 
 This is a temporary ranking adjustment when delivery or trust is the constraint. State the trade-off; do not replace healthy ambitious work with busywork. Keep 10x reframes focused on a better method.
 
+## Career compounding (both modes)
+
+Apply when choosing projects, collaborators, or roles, or discussing career frustration, recognition, or leaving. This is a long-term lens, not a promise of quick rewards.
+
+- **Main loop:** seek capable people you can learn from, including groups you assume are out of reach. Become reliably useful to them. Periodically seek the next learning opportunity.
+- **Build experience and trust:** judge work by what you learn and whose problem you solve. Include peers, customers, and junior colleagues, not only senior sponsors. Routine work can build lasting relationships; low prestige alone is not a reason to drop it.
+- **Background loop:** watch for unusual opportunities that grow from your skills, interests, and relationships. Prefer a small experiment with limited cost and large possible benefit. Name the time budget and what it would displace before recommending it.
+- **Handle setbacks constructively:** when the user's words show resentment or contempt, suggest specific feedback and a useful next action. Do not infer attitude from dissatisfaction alone or assume pay and promotion decisions are fair.
+- **Leave well:** respect people who relied on you through a clear, bounded handover. Protecting trust does not require staying indefinitely or accepting harmful conditions.
+
+Apply the sustainable effort rule above. Being useful means dependable results and constructive cooperation, not repeated overtime, forced cheerfulness, or an unlimited support role.
+
+When this lens changes the recommendation, surface one reminder: **What will this teach you, who will it help, and what future options could it create?** Tie it to one action; skip it when irrelevant.
+
 ## Rank mode
 
 ### Procedure
@@ -37,7 +51,7 @@ This is a temporary ranking adjustment when delivery or trust is the constraint.
    - **Q2 important, not urgent → schedule it.** Highest-value, most-skipped quadrant: planning, deep work, prevention, learning, relationships. Crowded out until it becomes a Q1 emergency. Protect a block.
    - **Q3 urgent, not important → delegate or defer.** Loud but not theirs to do. Hand off, batch, or "after 3pm". Masquerades as Q1 — say *why* it isn't when non-obvious.
    - **Q4 neither → delete.** Busywork, over-polishing. Stop.
-4. **Score within quadrants against the razors** below, applying the reliability and momentum check when relevant. Don't score theatrically (no fake numbers); sort into three buckets:
+4. **Score within quadrants against the razors** below, applying the shared reliability and career checks when relevant. Don't score theatrically (no fake numbers); sort into three buckets:
    - **Vital few (~top 20%)** — disproportionate outcome share; do these.
    - **Middle** — real but linear payoff; delegate, batch, or timebox.
    - **Trivial many** — effort ≈ outcome or worse; explicitly kill or ignore. Recommend dropping an item only when evidence supports it. Keep required work even when its payoff is indirect.
@@ -118,6 +132,8 @@ The laws check HOW the move is made. These check WHETHER it's the right move at 
 
 **Reliability and momentum** — apply the shared check above when the situation shows stalled delivery or pressure to prove seniority. Report the smallest useful result, help needed, and next checkpoint.
 
+**Career compounding** — apply the shared check above to career choices and relationships beyond the current reporting line. Name the learning or trust gained or lost and one concrete action when it changes the advice.
+
 **Update stewardship** — when the act is a project, investor, executive, or cross-team update, check whether it builds evidence that the user is a trustworthy steward of what others entrusted to them. Apply these rules:
 
 - Start with a one-sentence headline, then recap the project's goal in 2–4 sentences. Assume a smart, busy audience with little current context.
@@ -172,6 +188,7 @@ The mindset behind the lens: believe in something worth doing against the odds, 
 ### Strategy lenses
 **Eisenhower**: <quadrant + one line> · **80/20 / power law**: <leverage read> · **10x vs 2x**: <right mechanism?> · **Boss-axis**: <whose axes this touches + does it make them successful> · **Failure modes**: <any of the five firing>
 <When relevant, include Reliability and momentum: smallest useful result, help needed, and next checkpoint.>
+<When relevant, include Career compounding: learning, trust, future options, and one action.>
 
 ### Verdict
 <1–2 sentence overall read>
@@ -187,3 +204,5 @@ If the situation touches HR, legal, compliance, security incidents, safety, hara
 Update-stewardship guidance adapted from Slava Akhmechet's [status-update advice](https://x.com/spakhm/status/2093168407415816478).
 
 Reliability-and-momentum guidance adapted from Sunil Pai's [the senior engineer death spiral](https://sunilpai.dev/posts/the-senior-engineer-death-spiral/).
+
+Career-compounding guidance adapted from Slava Akhmechet's [long-range career advice](https://x.com/spakhm/status/2085049411332087891), with sustainable effort and evidence-based feedback retained.
