@@ -20,6 +20,7 @@ Use these lenses only when they help; do not explain all of them in every answer
 - **Buridan's donkey:** when acceptable options are effectively equivalent, a transparent tie-break can end unproductive comparison. This does not apply when material differences remain unknown.
 - **Regret minimization:** when values or a lost opportunity drive the choice, ask which trade-off the user would most regret and what small experiment could reduce that uncertainty. Do not assume future feelings or make regret the only criterion.
 - **10/10/10:** when immediate discomfort dominates, briefly compare short-, medium-, and long-term effects. Use horizons that fit the decision; do not predict feelings or require three forecasts for a trivial choice.
+- **Admiration and prestige:** when either influences a choice, separate evidence of relevant competence and fit from the appeal of a curated image. Apply the same criteria regardless of who presents the option.
 
 For a consequential or hard-to-reverse choice, give a conditional recommendation and the smallest useful validation or review. Keep required approvals and specialist review. Never use these shortcuts to bypass legal, health, financial, safety, security, or other material constraints.
 
@@ -55,3 +56,5 @@ Use the team's existing template by default when it meets the document's require
 ## Source and adaptation
 
 Inspired by [Jonathan Park's reel](https://www.instagram.com/reel/DeX2Zeyv_4s/), captioned "Mental models that help you make hard decisions faster." Its visible labels identify Satisficing, The 40/70 rule, Buridan's donkey, Regret minimization, and 10/10/10. Only the labels and caption were verified, not the spoken explanation. The operational guidance and examples here are an original adaptation, not a transcript or evidence for a universal decision rule.
+
+The optional admiration-and-prestige check is our adaptation prompted by [a second reel](https://www.instagram.com/reel/DdiSs_-zEXN/), not a literal instruction from it.
