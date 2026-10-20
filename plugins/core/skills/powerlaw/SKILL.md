@@ -1,20 +1,21 @@
 ---
 name: powerlaw
-description: Prioritize tasks and options by impact, urgency, and constraints, or review workplace communications for strategic risks. Use for backlog ranking, career choices, leverage analysis, power checks, and explicit requests for a workplace strategy review.
+description: Prioritize work, choose between concrete options, or review workplace communications for strategic risks. Use for backlog ranking, decision fatigue, career choices, leverage analysis, power checks, and explicit requests for a workplace strategy review.
 ---
 
-# Power Law — leverage razors and workplace power check
+# Power Law — prioritize, decide, and review workplace strategy
 
-Two modes. Pick by input, say which you're running:
+Three modes. Pick by input, say which you're running:
 
 - **Rank** — the input is a set of things the user *could* do (backlog, to-do list, options, "where should I help with X"). Find the vital few, name the trivial many to drop, reframe at least one item as a 10x move. Output decisions, not philosophy.
+- **Decide** — the user needs to choose one course of action, is stuck comparing acceptable options, or keeps reopening a choice. Read [references/decide.md](references/decide.md). Return a recommendation and the next step; skip the full Rank and Power-check procedures unless separately needed.
 - **Power-check** — the input is a communication or situation (draft message, email, meeting plan, political read). Run the 48 laws + strategy lenses; explain the risks and suggest changes the user can make. Rewrite only when explicitly asked.
 
-A draft about *choosing between options* may need both: power-check the wording, rank the underlying options.
+Use Rank for what to prioritize across several tasks; use Decide for which alternative to choose. A draft about a choice may also need Power-check when the user requests a strategic communication review. Do not run every mode by default.
 
 Treat these lenses as prompts for judgment. Do not force a drop list, a 10x reframe, or a political finding when the evidence does not support one. Required work stays in scope; label assumptions about other people instead of asserting motives.
 
-## Reliability and momentum (both modes)
+## Reliability and momentum (when relevant)
 
 Check for the senior engineer death spiral. Signs include growing scope, long gaps without reviewable work, vague positive updates, and plans to recover through longer hours. A new role or difficult project alone is not evidence of this pattern.
 
@@ -26,7 +27,7 @@ Check for the senior engineer death spiral. Signs include growing scope, long ga
 
 This is a temporary ranking adjustment when delivery or trust is the constraint. State the trade-off; do not replace healthy ambitious work with busywork. Keep 10x reframes focused on a better method.
 
-## Career compounding (both modes)
+## Career compounding (when relevant)
 
 Apply when choosing projects, collaborators, or roles, or discussing career frustration, recognition, or leaving. This is a long-term lens, not a promise of quick rewards.
 
