@@ -45,9 +45,9 @@ When this lens changes the recommendation, surface one reminder: **What will thi
 
 Apply when the user is deciding how to respond to a specific request for help (an outage, broken code, a blocked teammate, an upset customer): a reply, a draft, or an immediate action. This sets the order of the response, not the backlog; in Rank, weigh the request with the reliability check.
 
-- **Solve the problem first.** Cost, blame, process discussion, and "why didn't you ask earlier" are second-order. Handle them after the person is unblocked. Required safety, security, and approval steps are not second-order; keep them in the fix.
-- **Do not police tone.** People who ask for help are often having a bad day. Do not make help depend on a polite request; get on the side of the problem instead of mirroring their frustration. Do not adopt their blame of others.
-- **Reputation is invisible and compounds.** It is what people say about you when you are not there and the intent they assign you in an ambiguous situation. Fast feedback (likes, quick wins, a sharp reply that lands) can reward abrasive or transactional behavior while trust drops without a signal. Flag such moves even when they look like they work: in Power-check under Strategy lenses; in Rank only when it changes an item's bucket.
+- **Solve the problem first.** Cost, blame, process discussion, and "why didn't you ask earlier" are second-order. Handle them after the person is unblocked. Required safety, security, authorization, approval, and disclosure steps are not second-order; keep them in the fix.
+- **Do not police tone.** People who ask for help are often having a bad day. Frustration is not abuse; for threats or harassment, set the boundary or escalate first. Do not make help depend on a polite request; get on the side of the problem instead of mirroring their frustration. Do not adopt their blame of others.
+- **Reputation is invisible and compounds.** It is what people say about you when you are not there and the intent they assign you in an ambiguous situation. Fast feedback (likes, quick wins, a sharp reply that lands) can reward abrasive or transactional behavior while trust drops without a signal. Criticism said to your face is a rare visible signal; treat it as data, not an attack. Flag such moves even when they look like they work: in Power-check under Strategy lenses; in Rank only when it changes an item's bucket.
 - **Help without keeping score.** Do not frame help as a trade or a debt.
 - **Boundaries stay.** Help first does not mean an open-ended support role, accepting abuse, or overriding the reliability check above. Bound the help and route repeat work to a system.
 
@@ -145,7 +145,7 @@ The laws check HOW the move is made. These check WHETHER it's the right move at 
 
 **Career compounding** — apply the shared check above to career choices and relationships beyond the current reporting line. Name the learning or trust gained or lost and one concrete action when it changes the advice.
 
-**Help first** — when the draft answers someone who brought a problem, apply the shared check above. Flag replies that lead with blame, process, or a tone correction before the fix, or that frame help as a debt.
+**Help first** — when the draft answers someone who brought a problem, apply the shared check above. Flag replies that lead with blame, process, or a tone correction before the fix, or that frame help as a debt. Do not flag a boundary set in response to abuse.
 
 **Update stewardship** — when the act is a project, investor, executive, or cross-team update, check whether it builds evidence that the user is a trustworthy steward of what others entrusted to them. Apply these rules:
 
