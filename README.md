@@ -9,7 +9,7 @@ The installer links each runtime to this checkout, so they use the same source f
 |---|---|
 | `multiagent` | Coordinate independent tasks and verify the combined result. |
 | `redpen` | Coach prose revisions with explained issues and focused suggestions; rewrite only when asked. |
-| `powerlaw` | Prioritize work or review workplace strategy. |
+| `powerlaw` | Prioritize work, make a decision, or review workplace strategy. |
 | `grillme` | Pressure-test a plan through focused questions. |
 | `prove-it` | Verify the actual output before claiming completion. |
 | `show-me-your-work` | Keep a reviewable decision trail for substantial work. |
