@@ -40,6 +40,7 @@ Assume a worker has no session context. Include:
 ## Parallelism rules
 
 - Parallelize independent work only. Keep dependent steps serial.
+- A worker starts with no context and returns a summary, so each handoff loses detail. Run lookups and other self-checking tasks at a lower reasoning effort.
 - Give each actionable inbound request its own tracked item when the host supports durable task state.
 - Cap concurrent build or browser jobs to avoid resource starvation.
 - Never let two agents edit the same files without explicit coordination.
@@ -50,7 +51,7 @@ Assume a worker has no session context. Include:
 - Inspect repository status and the complete diff.
 - Run focused checks, then the broad gate appropriate to the change.
 - Verify live state when the request concerns a deployment or external system.
-- For an independent Fable review, select `claude-fable-5-1`. For reviews through the Claude Code CLI, request JSON output and verify that `modelUsage` reports `claude-fable-5-1` before marking the review complete.
+- For an independent review, use a model from a different family than the author when one is available. For reviews through a CLI, request machine-readable output and verify that the reported model is the one you requested before marking the review complete.
 - Treat worker summaries as leads, not evidence.
 - Report each deliverable as done, in progress, or blocked, with the proof or blocker.
 
