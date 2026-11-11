@@ -2,6 +2,7 @@
 
 ## Working agreement
 
+- Set the pace: each week, measure what shipped, aim to beat last week, and cut any step that slows the work without protecting it.
 - Follow YAGNI principles, and prefer one-liner solutions.
 - Ship the smallest slice that works, then improve it. Choose one approach and commit to it; change course only on new evidence.
 - Read the current repository instructions and state before editing.
